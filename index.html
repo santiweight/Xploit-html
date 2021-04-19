@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Poker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+</head>
+<body>
+    <div class="col-lg-5">
+        <div class="poker-table-container">
+          <div class="poker-table">
+            <div class="player-cards player-card-1">
+              <h4 class="player-name">Name</h4>
+              <h3 class="player-stack">$25.00</h3>
+            </div>
+            <div class="player-cards player-card-2">
+                <h4 class="player-name">Name</h4>
+                <h3 class="player-stack">$25.00</h3>
+            </div>
+            <div class="player-cards player-card-3">
+                <h4 class="player-name">Name</h4>
+                <h3 class="player-stack">$25.00</h3>
+            </div>
+            <div class="player-cards player-card-4">
+                <h4 class="player-name">Name</h4>
+                <h3 class="player-stack">$25.00</h3>
+            </div>
+            <div class="player-cards player-card-5">
+                <h4 class="player-name">Name</h4>
+                <h3 class="player-stack">$25.00</h3>
+            </div>
+            <div class="player-cards player-card-6">
+                <h4 class="player-name">Name</h4>
+                <h3 class="player-stack">$25.00</h3>
+            </div>
+          </div>
+        </div>
+        <div class="bet-buttons">
+            <button class="bet-button">Raise</button>
+            <button class="bet-button">Call</button>
+            <button class="bet-button">Fold</button>
+        </div>
+        <div class="bet-amount-selector">
+            <select name="dropdown" id="dropdown">
+                <option value="Any">Any</option>
+                <option value="Between">Between</option>
+                <option value="Above">Above</option>
+                <option value="Below">Below</option>
+                <option value="Exactly">Exactly</option>
+              </select>
+              <p class="slider-lo">$1.00</p>
+              <input type="range" name="slider" id="slider" min="1" max="25">
+              <p class="slider-hi">$25.00</p>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <div class="node-selector">
+            <h2 class="even">UTG: Fold</h2>
+            <h2 class="odd">UTG1: Fold</h2>
+            <h2 class="even">UTG2: Fold</h2>
+            <h2 class="odd">UTG3: Fold</h2>
+            <h2 class="even">UTG4: Fold</h2>
+            <h2 class="odd">UTG5: Fold</h2>
+        </div>
+          <button class="lock-node">Lock Node</button>
+    </div>
+    <div class="col-lg-4 range-viewer-container">
+        <div class="range-viewer">
+            <table class="tg">
+                <tbody>
+                  <tr>
+                    <td class="tg-0lax blue">AA</td>
+                    <td class="tg-0lax blue">AKs</td>
+                    <td class="tg-0lax blue">AQs</td>
+                    <td class="tg-0lax blue">AJs</td>
+                    <td class="tg-0lax blue">ATs</td>
+                    <td class="tg-0lax blue">A9s</td>
+                    <td class="tg-0lax blue">A8s</td>
+                    <td class="tg-0lax blue">A7s</td>
+                    <td class="tg-0lax blue">A6s</td>
+                    <td class="tg-0lax blue">A5s</td>
+                    <td class="tg-0lax blue">A4s</td>
+                    <td class="tg-0lax blue">A3s</td>
+                    <td class="tg-0lax blue">A2s</td>
+                    </tr>
+                  <tr>
+                    <td class="tg-0lax blue">AKo</td>
+                    <td class="tg-0lax blue">KK</td>
+                    <td class="tg-0lax blue">KQs</td>
+                    <td class="tg-0lax blue">KJs</td>
+                    <td class="tg-0lax blue">KTs</td>
+                    <td class="tg-0lax whiteblue">K9s</td>
+                    <td class="tg-0lax whiteblue">K8s</td>
+                    <td class="tg-0lax whiteblue">K7s</td>
+                    <td class="tg-0lax whiteblue">K6s</td>
+                    <td class="tg-0lax whiteblue">K5s</td>
+                    <td class="tg-0lax whiteblue">K4s</td>
+                    <td class="tg-0lax whiteblue">K3s</td>
+                    <td class="tg-0lax whiteblue">K2s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax blue">AQo</td>
+                    <td class="tg-0lax blue">KQo</td>
+                    <td class="tg-0lax blue">QQ</td>
+                    <td class="tg-0lax blue">QJs</td>
+                    <td class="tg-0lax blue">QTs</td>
+                    <td class="tg-0lax whiteblue">Q9s</td>
+                    <td class="tg-0lax whiteblue">Q8s</td>
+                    <td class="tg-0lax whiteblue">Q7s</td>
+                    <td class="tg-0lax whiteblue">Q6s</td>
+                    <td class="tg-0lax whiteblue">Q5s</td>
+                    <td class="tg-0lax whiteblue">Q4s</td>
+                    <td class="tg-0lax whiteblue">Q3s</td>
+                    <td class="tg-0lax whiteblue">Q2s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax blue">AJo</td>
+                    <td class="tg-0lax gray">KJo</td>
+                    <td class="tg-0lax gray">QJo</td>
+                    <td class="tg-0lax blue">JJ</td>
+                    <td class="tg-0lax blue">JTs</td>
+                    <td class="tg-0lax whiteblue">J9s</td>
+                    <td class="tg-0lax whiteblue">J8s</td>
+                    <td class="tg-0lax whiteblue">J7s</td>
+                    <td class="tg-0lax whiteblue">J6s</td>
+                    <td class="tg-0lax whiteblue">J5s</td>
+                    <td class="tg-0lax whiteblue">J4s</td>
+                    <td class="tg-0lax whiteblue">J3s</td>
+                    <td class="tg-0lax whiteblue">J2s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax blue">ATo</td>
+                    <td class="tg-0lax gray">KTo</td>
+                    <td class="tg-0lax gray">QTo</td>
+                    <td class="tg-0lax gray">JTo</td>
+                    <td class="tg-0lax blue">TT</td>
+                    <td class="tg-0lax blue">T9s</td>
+                    <td class="tg-0lax whiteblue">T8s</td>
+                    <td class="tg-0lax whiteblue">T7s</td>
+                    <td class="tg-0lax whiteblue">T6s</td>
+                    <td class="tg-0lax whiteblue">T5s</td>
+                    <td class="tg-0lax whiteblue">T4s</td>
+                    <td class="tg-0lax whiteblue">T3s</td>
+                    <td class="tg-0lax whiteblue">T2s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax gray">A9o</td>
+                    <td class="tg-0lax gray">K9o</td>
+                    <td class="tg-0lax gray">Q9o</td>
+                    <td class="tg-0lax gray">J9o</td>
+                    <td class="tg-0lax gray">T9o</td>
+                    <td class="tg-0lax blue">99</td>
+                    <td class="tg-0lax whiteblue">98s</td>
+                    <td class="tg-0lax whiteblue">97s</td>
+                    <td class="tg-0lax whiteblue">96s</td>
+                    <td class="tg-0lax whiteblue">95s</td>
+                    <td class="tg-0lax whiteblue">94s</td>
+                    <td class="tg-0lax whiteblue">93s</td>
+                    <td class="tg-0lax whiteblue">92s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax gray">A8o</td>
+                    <td class="tg-0lax gray">K8o</td>
+                    <td class="tg-0lax gray">Q8o</td>
+                    <td class="tg-0lax gray">J8o</td>
+                    <td class="tg-0lax gray">T8o</td>
+                    <td class="tg-0lax gray">98o</td>
+                    <td class="tg-0lax blue">88</td>
+                    <td class="tg-0lax whiteblue">87s</td>
+                    <td class="tg-0lax whiteblue">86s</td>
+                    <td class="tg-0lax whiteblue">85s</td>
+                    <td class="tg-0lax whiteblue">84s</td>
+                    <td class="tg-0lax whiteblue">83s</td>
+                    <td class="tg-0lax whiteblue">82s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax gray">A7o</td>
+                    <td class="tg-0lax gray">K7o</td>
+                    <td class="tg-0lax gray">Q7o</td>
+                    <td class="tg-0lax gray">J7o</td>
+                    <td class="tg-0lax gray">T7o</td>
+                    <td class="tg-0lax gray">97o</td>
+                    <td class="tg-0lax gray">87o</td>
+                    <td class="tg-0lax blue">77</td>
+                    <td class="tg-0lax whiteblue">76s</td>
+                    <td class="tg-0lax whiteblue">75s</td>
+                    <td class="tg-0lax whiteblue">74s</td>
+                    <td class="tg-0lax whiteblue">73s</td>
+                    <td class="tg-0lax whiteblue">72s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax gray">A6o</td>
+                    <td class="tg-0lax gray">K6o</td>
+                    <td class="tg-0lax gray">Q6o</td>
+                    <td class="tg-0lax gray">J6o</td>
+                    <td class="tg-0lax gray">T6o</td>
+                    <td class="tg-0lax gray">96o</td>
+                    <td class="tg-0lax gray">86o</td>
+                    <td class="tg-0lax gray">76o</td>
+                    <td class="tg-0lax blue">66</td>
+                    <td class="tg-0lax blue">65s</td>
+                    <td class="tg-0lax whiteblue">64s</td>
+                    <td class="tg-0lax whiteblue">63s</td>
+                    <td class="tg-0lax whiteblue">62s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax gray">A5o</td>
+                    <td class="tg-0lax gray">K5o</td>
+                    <td class="tg-0lax gray">Q5o</td>
+                    <td class="tg-0lax gray">J5o</td>
+                    <td class="tg-0lax gray">T5o</td>
+                    <td class="tg-0lax gray">95o</td>
+                    <td class="tg-0lax gray">85o</td>
+                    <td class="tg-0lax gray">75o</td>
+                    <td class="tg-0lax gray">65o</td>
+                    <td class="tg-0lax blue">55</td>
+                    <td class="tg-0lax whiteblue">54s</td>
+                    <td class="tg-0lax whiteblue">53s</td>
+                    <td class="tg-0lax whiteblue">52s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax gray">A4o</td>
+                    <td class="tg-0lax gray">K4o</td>
+                    <td class="tg-0lax gray">Q4o</td>
+                    <td class="tg-0lax gray">J4o</td>
+                    <td class="tg-0lax gray">T4o</td>
+                    <td class="tg-0lax gray">94o</td>
+                    <td class="tg-0lax gray">84o</td>
+                    <td class="tg-0lax gray">74o</td>
+                    <td class="tg-0lax gray">64o</td>
+                    <td class="tg-0lax gray">54o</td>
+                    <td class="tg-0lax">44</td>
+                    <td class="tg-0lax whiteblue">43s</td>
+                    <td class="tg-0lax whiteblue">42s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax gray">A3o</td>
+                    <td class="tg-0lax gray">K3o</td>
+                    <td class="tg-0lax gray">Q3o</td>
+                    <td class="tg-0lax gray">J3o</td>
+                    <td class="tg-0lax gray">T3o</td>
+                    <td class="tg-0lax gray">93o</td>
+                    <td class="tg-0lax gray">83o</td>
+                    <td class="tg-0lax gray">73o</td>
+                    <td class="tg-0lax gray">63o</td>
+                    <td class="tg-0lax gray">53o</td>
+                    <td class="tg-0lax gray">43o</td>
+                    <td class="tg-0lax">33</td>
+                    <td class="tg-0lax whiteblue">32s</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0lax gray">A2o</td>
+                    <td class="tg-0lax gray">K2o</td>
+                    <td class="tg-0lax gray">Q2o</td>
+                    <td class="tg-0lax gray">J2o</td>
+                    <td class="tg-0lax gray">T2o</td>
+                    <td class="tg-0lax gray">92o</td>
+                    <td class="tg-0lax gray">82o</td>
+                    <td class="tg-0lax gray">72o</td>
+                    <td class="tg-0lax gray">62o</td>
+                    <td class="tg-0lax gray">52o</td>
+                    <td class="tg-0lax gray">42o</td>
+                    <td class="tg-0lax gray">32o</td>
+                    <td class="tg-0lax">22</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="range-squares-container">
+          <div class="range-square">
+            <div class="unmatched-range">
+              <p class="holding">AA</p>
+            </div>
+            <div class="matched-range">
+              <p class="matched-range-value">0.80</p>
+            </div>
+          </div>
+          <div class="range-square range-square-alt">
+            <div class="unmatched-range">
+              <p class="holding">AA</p>
+            </div>
+            <div class="matched-range">
+              <p class="matched-range-value">0.80</p>
+            </div>
+          </div>
+          <div class="range-square">
+            <div class="unmatched-range">
+              <p class="holding">AA</p>
+            </div>
+            <div class="matched-range">
+              <p class="matched-range-value">0.80</p>
+            </div>
+          </div>
+          <div class="range-square range-square-alt">
+            <div class="unmatched-range">
+              <p class="holding">AA</p>
+            </div>
+            <div class="matched-range">
+              <p class="matched-range-value">0.80</p>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
