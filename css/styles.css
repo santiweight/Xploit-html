@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --blue: rgb(14, 31, 165);
+    --whiteblue: #d0d0f5;
+    --lightblue: rgb(56, 75, 245);
+    --lightgray: rgb(237, 237, 237);
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    padding: 5vh;
+    background-color: rgb(242, 242, 242);
+}
+
+.poker-table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 25px;
+}
+
+.poker-table {
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 100%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--blue);
+}
+
+.player-cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 75px;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: white;
+    border: 2px solid var(--blue);
+}
+
+.player-card-1 {
+    top: -30px;
+    left: 70px;
+}
+
+.player-card-2 {
+    top: -105px;
+    left: 260px;
+}
+
+.player-card-3 {
+    top: -50px;
+    left: -50px;
+}
+
+.player-card-4 {
+    top: -130px;
+    left: 400px;
+}
+
+.player-card-5 {
+    top: -70px;
+    left: 70px;
+}
+
+.player-card-6 {
+    top: -145px;
+    left: 260px;
+}
+
+.bet-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.bet-buttons > button {
+    width: 130px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    outline: none;
+    margin: 20px;
+    color: var(--blue);
+    border: var(--blue) 2px solid;
+    background: white;
+    cursor: pointer;
+    transition: 100ms ease;
+}
+
+.bet-buttons > button:hover {
+    transform: scale(0.95);
+    color: white;
+    background-color: var(--blue);
+}
+
+.bet-amount-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+#dropdown {
+    width: 20%;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#slider {
+    appearance: none;
+    width: 45%;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 15px;
+    opacity: 1;
+    border-radius: 5px;
+    background: var(--blue);
+    border: 2px solid var(--blue);
+    outline: none;
+    transition: opacity 0.2s ease 0s;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: white;
+    border: 2px solid var(--blue);
+    cursor: pointer;
+  }
+  
+  #slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: var(--blue);
+    cursor: pointer;
+  }
+
+.col-lg-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-lg-3 h1 {
+    font-weight: 400;
+}
+
+.node-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 150px;
+    height: 200px;
+    overflow-y: auto;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color: grey;
+    border-image: initial;
+    padding: 0px;
+}
+
+.node-selector h1 {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.176);
+}
+
+.node-selector h2 {
+    width: 100%;
+    margin-top: 0px;
+    font-size: 20px;
+    padding: 10px 5px;
+    font-weight: lighter;
+}
+
+.even {
+    background-color: var(--lightgray);
+}
+
+.odd {
+    background-color: white;
+}
+
+.lock-node {
+    width: 150px;
+    height: 115px;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: white;
+    margin-top: 135px;
+    color: var(--blue);
+    outline: none;
+    cursor: pointer;
+    border: 2px solid var(--blue);
+    border-radius: 5px;
+    transition: 200ms ease;
+}
+
+.lock-node:hover {
+    color: white;
+    background-color: var(--blue);
+    transform: scale(0.98);
+}
+
+.range-viewer-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: no-drop;
+}
+
+.col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.range-viewer {
+    width: 450px;
+    height: 450px;
+    background: white;
+}
+
+.tg {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0px;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.tg {
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0px;
+}
+
+.tg .tg-0lax {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tg td {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    width: 7.7%;
+    word-break: normal;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+}
+
+.blue {
+    background: var(--blue);
+    color: white;
+}
+
+.gray {
+    background: var(--lightgray);
+}
+
+.whiteblue {
+    background: var(--whiteblue);
+}
+
+.range-squares-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.range-square {
+    width: 60px;
+    height: 60px;
+    border: 2px solid gray;
+}
+
+.unmatched-range {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 35%;
+    background-color: var(--blue);
+    color: white;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.matched-range {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 65%;
+    background-color: var(--lightgray);
+    padding-right: 5px;
+    padding-bottom: 0px;
+}
